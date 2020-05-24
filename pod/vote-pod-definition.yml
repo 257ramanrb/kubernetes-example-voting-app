@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: vote
+  labels:
+    name: vote
+    app: voting-app
+
+spec:
+  containers:
+    - name: vote
+      image: dockersamples/examplevotingapp_vote
