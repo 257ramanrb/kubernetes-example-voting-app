@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: db
+  labels:
+    app: voting-app
+
+spec:
+  template:
+    metadata:
+      name: db
+      labels:
+        name: db
+        app: voting-app
+
+    spec:
+      containers:
+        - name: db
+          image: postgres
+          env:
+            - name: POSTGRES_HOST_AUTH_METHOD
+              value: "trust" # anyone can connect with DB without password
+
+  replicas: 1
+  selector:
+    matchLabels:
+      name: db
+      app: voting-app

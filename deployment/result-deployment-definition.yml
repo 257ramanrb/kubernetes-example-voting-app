@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: result
+  labels:
+    app: voting-app
+
+spec:
+  template:
+    metadata:
+      name: result
+      labels:
+        name: result
+        app: voting-app
+
+    spec:
+      containers:
+        - name: result
+          image: dockersamples/examplevotingapp_result
+
+  replicas: 1
+  selector:
+    matchLabels:
+      name: result
+      app: voting-app
+
