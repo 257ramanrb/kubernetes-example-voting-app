@@ -4,11 +4,11 @@
 Make sure **Docker** and **Kubectl** are installed on your system. For windows, prefer "[Docker desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)".
 
 Go to deployment directory and run following commands on CMD:
-1.  `kubectl create -f redis-deploment-definition.yml`
-2.  `kubectl create -f postgres-deploment-definition.yml`
-3.  `kubectl create -f vote-deploment-definition.yml`
-4.  `kubectl create -f result-deploment-definition.yml`
-5.  `kubectl create -f worker-deploment-definition.yml`
+1.  `kubectl create -f redis-deployment-definition.yml`
+2.  `kubectl create -f postgres-deployment-definition.yml`
+3.  `kubectl create -f vote-deployment-definition.yml`
+4.  `kubectl create -f result-deployment-definition.yml`
+5.  `kubectl create -f worker-deployment-definition.yml`
 
 Go to service directory and run following commands on CMD:
 1.  `kubectl create -f redis-service-definition.yml`
